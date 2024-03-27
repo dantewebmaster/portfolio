@@ -1,8 +1,16 @@
 import Image from "next/image";
 
-const ghToken = process.env.GITHUB_API_TOKEN;
+const ghToken = process.env.GH_API_TOKEN;
 
-async function fetchGithubData() {
+type User = {
+  name: string
+  bio: string
+  avatar_url: string
+  location: string
+  company: string
+}
+
+async function fetchGithubData(): Promise<User> {
   const data = await fetch('https://api.github.com/users/dantewebmaster', {
     headers: {
       Authorization: 'Bearer ' + ghToken,
