@@ -4,9 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: '/portfolio',
   images: {
-    loader: 'akamai',
-    path: ''
-  }
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig
