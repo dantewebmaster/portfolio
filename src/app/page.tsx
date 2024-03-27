@@ -33,6 +33,7 @@ export default async function Home() {
         className="rounded-full mb-4"
       />
       <h1 className="font-thin text-4xl mb-4">{userData.name} - <span>@ {userData.company}</span></h1>
+      <hr />
       <p>{userData.location}</p>
       <h3 className="border rounded-lg p-8 mt-4 max-w-screen-sm text-center">{userData.bio}</h3>
     </main>
